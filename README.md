@@ -1,5 +1,8 @@
-# docker-cheatsheet
+# docker-training
 
+Use for [Bitovi Docker Training](https://www.bitovi.com/academy/learn-docker.html)
+
+## Cheatsheet
 ```
 # Build an image
 docker build -t my-node-app .
