@@ -1,4 +1,4 @@
-const mysql = require('mysql')
+const mysql = require('promise-mysql')
 const express = require('express')
 const app = express()
 
@@ -8,14 +8,18 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-app.get('/db', (req, res) => {
+app.get('/db', async function (req, res) {
   var con = mysql.createConnection({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS
-  });
-  con.connect()
-  res.send("Connected!");
+  })
+  .then(function (data) {
+    res.send("Connected!")
+  })
+  .catch(function(error) {
+    res.send(error)
+  })
 })
 
 app.listen(port, () => {
