@@ -18,3 +18,8 @@ $ curl localhost:8080/
 $ docker logs my-container 
 $ curl localhost:8080/
 ```
+
+### 4. Shell in to container and look around!
+```
+docker exec -it my-container bash
+```
