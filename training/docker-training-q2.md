@@ -8,8 +8,8 @@ $ docker build -t my-image .
 
 ### 2. Run the container using port-forwarding
 ```
-$ docker run --name my-container -p 8080:8080 -d my-image
-$ curl localhost:8080/
+$ docker run --name my-container -p 8000:8000 -d my-image
+$ curl localhost:8000/
 $ docker logs my-container 
 $ docker rm -f my-container
 ```
