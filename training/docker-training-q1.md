@@ -3,7 +3,7 @@
 ### 1. Clone the repo and build the image
 ```
 $ git clone https://github.com/ConnorGraham/docker-training.git
-$ docker build -t my-image .
+$ docker build -t my-node-app .
 $ docker image ls
 ```
 
@@ -19,13 +19,13 @@ $ docker image ls
 Replace "FROM node:15" with "FROM my-parent-image" in Dockerfile
 ```
 
-### 4. Rebuild my-image with a new tag
+### 4. Rebuild my-node-app with a new tag
 ```
-$ docker build -t my-image:13 .
+$ docker build -t my-node-app:13 .
 $ docker image ls
 ```
 
 ### 5. Verify node version 13 is being used
 ```
-$ docker inspect my-image:13 | grep NODE_VERSION
+$ docker inspect my-node-app:13 | grep NODE_VERSION
 ```
