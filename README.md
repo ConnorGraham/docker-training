@@ -14,7 +14,7 @@ docker build -t my-node-app:v1.0.0 .
 docker image ls
 
 # Create a container
-docker run --name my-container -p 8000:$MY_PORT -d -e PORT=$MY_PORT my-node-app:latest
+docker run --name my-container -p 8000:9000 -d -e PORT=9000 my-node-app:latest
 
 # List running containers
 docker ps

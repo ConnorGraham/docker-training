@@ -1,14 +1,15 @@
 FROM node:15
 
-ARG PORT=8000
-ENV PORT=$PORT
-
+CMD bash
 WORKDIR app 
 
 COPY src src
 COPY package.json .
 
 RUN npm install
+
+ARG PORT=8000
+ENV PORT=$PORT
 EXPOSE $PORT
 
 CMD npm start
