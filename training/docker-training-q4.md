@@ -19,7 +19,7 @@ $ docker run --name my-dev-container -p 8000:8000 -d -v "$(pwd)"/src:/app/src my
 b67e760ef59c2c42c2737720031537f169302513b37b4b97478c8f21e59791bb
 
 # Start Prod image
-$ docker run --name my-prod-container -p 9000:8000 -d my-node-app:prod
+$ docker run --name my-prod-container -p 9000:8000 -d -v "$(pwd)"/src:/app/src my-node-app:prod
 200d00aafb79ed371428c9f647e5f7ef2ad9d2ddd3281587401a6fc6267c0101
 
 # Test Dev container
