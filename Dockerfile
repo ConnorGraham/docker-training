@@ -17,3 +17,7 @@ CMD npm run start:prod
 FROM prod as dev
 RUN npm install --only=dev
 CMD npm start
+
+FROM dev as test
+COPY test test
+CMD npm test
